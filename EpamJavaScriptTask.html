@@ -1,0 +1,166 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet"
+          href= 
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>Signin</title>
+<style>
+input[type=password],input[type=email]
+{
+	width:90%;
+	height:7%;
+	border-color:white;
+}
+.container {
+	width:30%;
+	height:75%;
+	margin:0 auto;
+	padding:0%;
+	backgroun-color:#ffcccc;
+}
+.input-icons i{
+	position:relative;
+	float:right;
+	margin-right:2%;
+	margin-top:2%;
+}
+@media only screen and (max-width: 600px) {
+  .container{
+	width:60%;
+	height:75%;
+	margin:0 auto;
+	padding:0%;
+	backgroun-color:#ffcccc;
+}
+}
+.fbody.invalid{
+text-align = center;
+}
+.heading{
+	background-color:#00cccc;
+	position:relative;
+	top:0;
+	height:10%;
+	width:100%;
+}
+h4{
+	color:white;
+	font-size:20px;
+	text-align:center;
+	position:relative;
+	top:25%;
+}
+.fbody{
+	padding:9%;
+}
+.epambutton button{
+	margin-top:10%;
+	border-radius:5px;
+	cursor:pointer;
+	width:100%;
+	height:10%;
+	color:white;
+	background-color:#E7E75D;
+	border:none;
+}
+.button button{
+	margin-top:15%;
+	border-radius:5px;
+	cursor:pointer;
+	width:100%;
+	height:7%;
+	color:white;
+	background-color:#00cccc;
+	border:none;
+}
+.or{
+margin-top:25%;
+}
+.or p{
+	color:gray;
+	text-align:center;
+}
+.input-icons{
+	border-radius:5px;
+	margin-top:10%;
+	border-color:gray;
+	border-width:thin;
+	border-style:solid;
+	opacity:0.9;
+}
+a {
+	color:gray;
+	margin-top:5%;
+}
+.a1
+{
+	position:relative;
+	float:left;
+}
+.a2{
+	position:relative;
+	float:right;
+}
+</style>
+<script>
+function validate()
+{
+	var email=document.getElementById("email").value;
+	var pass=document.getElementById("password").value;
+	if(email=="forEpam@gmail.com" && pass=="epamtask")
+	{
+		return true;
+	}
+	else
+	{	
+		document.getElementById("invalid").innerHTML=" ";
+		document.getElementById("invalid").innerHTML="Invalid Credentials";
+		document.getElementById("invalid").style.color="red";
+		document.getElementById("invalid").style.textAlign = "center";
+	}
+	return false;
+}
+</script>
+</head>
+<body>
+<div class="container">
+  <form action="Welcome.html" onsubmit="return(validate())">
+	<div class="heading">
+		<h4 class="head"><b>Sign in</b></h4>
+	</div>
+	<div class="fbody">
+	<p id="invalid"><center></center></p>
+	<div class="input-icons">
+		<input class="input-field" id="email"
+                       type="email" 
+                       placeholder="forEpam@gmail.com" required> 
+                <i class="fa fa-envelope icon"> 
+              </i>
+                 
+        </div>
+	<div class="input-icons"> 
+		<input class="input-field" id="password" 
+                       type="password"
+			placeholder="epamtask" required> 
+                <i class="fa fa-unlock icon"> 
+              </i> 
+                
+        </div>
+	<div class="button">
+		<button type="submit" value="SIGN IN">SIGN IN</button>
+	</div>
+	<a href="#" class="a1">Forgot your password?</a>
+	<a href="#" class="a2">Register!</a>
+	<div class="or">
+	<p>--------------------- OR ---------------------</p>
+	</div>
+
+	<div class="epambutton">
+	<button onclick="window.location.href = 'https://epam.com';" value="epam"><b>&lt;EPAM LOGIN&gt;</b></button>
+	</div>
+	</div>
+  </form>
+</div>
+</body>
+</html>
